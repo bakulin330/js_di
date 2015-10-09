@@ -1,31 +1,30 @@
 !function(){
     function AppClass(deps){
-        DI.loadObjDeps(this,deps);
+//        this.area = null;
     }
 
     AppClass.prototype.setArea = function(area){
-        if (null===this.area){
+        if ('undefined'===typeof this.area || null===this.area){
             this.area = area;
         }
     };
 
     function AreaClass(deps){
-        DI.loadObjDeps(this,deps);
         this.name = 'area';
+        this.variant = null;
     }
 
     function Variant(deps){
-        DI.loadObjDeps(this,deps);
         this.name = 'Variant';
+        this.cont = null;
+        this.incon = null;
     }
 
     function Cont(deps){
-        DI.loadObjDeps(this,deps);
         this.name = 'Cont';
     }
 
     function Incon(deps){
-        DI.loadObjDeps(this,deps);
         this.name = 'Incon';
     }
 
